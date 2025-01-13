@@ -29,10 +29,8 @@ export const Signup = () => {
 
       const data = await response.json();
       setSuccess('Signup successful');
-      console.log('Signup successful:', data);
     } catch (error) {
       setError(error.message);
-      console.error('Error:', error);
     }
   };
 
@@ -57,69 +55,68 @@ export const Signup = () => {
   const passwordsMatch = password === passwordConfirmation;
 
   return (
-    <div className='page-container'>
+   <div className='page-container'>
       <header className='project-header'><h1 className='task-master'>Task Master</h1>
       </header>
       <div className="signup-container">
-      <h2>Sign Up</h2>
-      {error && <p className="error">{error}</p>}
-      {success && <p className="success">{success}</p>}
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-        <div className="form-group">
-          <label htmlFor='username'>Username</label>
-          <input
-            type="name"
-            id="username"
-            placeholder='Username'
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
-          <label htmlFor='email'>Email</label>
-          <input
-            type="email"
-            id="email"
-            placeholder='Enter your email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            placeholder='Enter your password'
-            value={password}
-            onChange={handlePasswordChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="passwordConfirmation">Confirm Password</label>
-          <input
-            type="password"
-            id="passwordConfirmation"
-            value={passwordConfirmation}
-            onChange={handlePasswordConfirmationChange}
-            required
-          />
-          {showPasswordMatch && (
-            <p className={passwordsMatch ? 'match' : 'no-match'}>
-              {passwordsMatch ? 'Passwords match' : 'Passwords do not match!'}
-            </p>
-          )}
-        </div>
-        <button type="submit" disabled={!passwordsMatch}>Sign Up</button>
-      </form>
-      <p className="login-link">
-          Already have an account? <Link to="/login">Login</Link>
-        </p>
-    </div>
+        <h2>Sign Up</h2>
+        {error && <p className="error">{error}</p>}
+        {success && <p className="success">{success}</p>}
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor='username'>Username</label>
+            <input
+              type="name"
+              id="username"
+              placeholder='Username'
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor='email'>Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder='Enter your email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder='Enter your password'
+              value={password}
+              onChange={handlePasswordChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="passwordConfirmation">Confirm Password</label>
+            <input
+              type="password"
+              id="passwordConfirmation"
+              value={passwordConfirmation}
+              onChange={handlePasswordConfirmationChange}
+              required
+            />
+            {showPasswordMatch && (
+              <p className={passwordsMatch ? 'match' : 'no-match'}>
+                {passwordsMatch ? 'Passwords match' : 'Passwords do not match!'}
+              </p>
+            )}
+          </div>
+          <button type="submit" disabled={!passwordsMatch}>Sign Up</button>
+        </form>
+        <p className="login-link">
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
+      </div>
     </div>
   );
 };
-
