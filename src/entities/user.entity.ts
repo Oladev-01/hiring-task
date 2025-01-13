@@ -1,14 +1,21 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from "typeorm";
 import { CoreEntity } from "./core.entity";
+import { TodoEntity } from "./todo.entity";
 
-@Entity("user")
+@Entity("users")
 export class UserEntity extends CoreEntity {
   @PrimaryGeneratedColumn("uuid")
-  uuid;
+  uuid: string;
+
   @Column({ type: "varchar", nullable: true })
-  username;
+  username: string;
+
   @Column({ type: "varchar", nullable: false })
-  email;
+  email: string;
+
   @Column({ type: "varchar", nullable: false })
-  password;
+  password: string;
+
+  @OneToMany(() => TodoEntity, (todo) => todo.user)
+  todos: TodoEntity[];
 }

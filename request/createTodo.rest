@@ -1,0 +1,10 @@
+POST http://localhost:8000/api/v1/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYmE2MGJhNGUtOTc0ZC00YWFjLTg4ODktMzViZWRlMzExZDczIiwiaWF0IjoxNzM2Njc4MTAwLCJleHAiOjE3MzY2ODE3MDB9.jSv-A4T9uw67P0P0mB3gKF0LMkGFWCzEjZaK4UnF2bE
+
+{
+  "title": "Buy Beans",
+  "description": "Need to buy beans from the store",
+  "status": false,
+  "dueDate": "2023-12-31T23:59:59Z"
+}

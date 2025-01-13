@@ -1,0 +1,8 @@
+PUT http://localhost:8000/api/v1/todos/49bc63d1-5919-4e0b-9a44-a57906090bae
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZjcxMjA3NWYtMjc1Yi00MDllLWI4ODAtNGQ3MTQ3NWRkMGY1IiwiaWF0IjoxNzM2Njc1NTA5LCJleHAiOjE3MzY2NzkxMDl9.72k-iNP4NnjVI-QSPazX5bgpQUCQyEWgit8bhWP7wKA
+
+{
+  "title": "Buy rice",
+  "status": true
+}

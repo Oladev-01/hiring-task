@@ -7,7 +7,7 @@ import {
 
 @Entity()
 export class CoreEntity {
-  @CreateDateColumn({ name: "created_at" })
+  @CreateDateColumn({ name: "created_at"})
   createdAt;
   @UpdateDateColumn({ name: "updated_at", nullable: true })
   updatedAt;

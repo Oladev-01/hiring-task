@@ -7,6 +7,7 @@ import httpStatus from "http-status";
 const loginHandler = async (req, res) => {
   const { email, password } = req.body;
   const findUser = await userService.getOneUser({ email });
+  console.log(findUser);
   if (!findUser) return null;
   if (findUser.deletedAt) return null;
   const compare = await comparePassword(password, findUser.password);
