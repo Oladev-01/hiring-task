@@ -1,7 +1,7 @@
 import React from 'react';
 // import './Homepage.css';
 
-const Homepage = () => {
+export const Homepage = () => {
   return (
     <div className="homepage">
       <header className="homepage-header">
@@ -17,4 +17,3 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;

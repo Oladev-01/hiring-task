@@ -1,19 +1,35 @@
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.project-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 14%, rgba(9,9,121,1) 70%);
+  padding: 10px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
     .page-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
         justify-content: center;
         min-height: 100vh;
         padding-top: 60px;
-        box-sizing: border-box;
     }
-    .project-header {
+  /* start of header section */
+
+  .project-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,10 +43,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .project-header h1 {
-    font-size: 24;
-    color: white;
+        font-size: 24;
+        color: white;
     }
-    .signup-container {
+    /* end of header section */
+
+    .login-container {
         width: 400px;
         margin: 0 auto;
         padding: 20px;
@@ -38,15 +56,14 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         background-color: #f9f9f9;
     }
+    .login-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-  .signup-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
+    .form-group {
+        margin-bottom: 15px;
+    }
   
   .form-group label {
     display: block;
@@ -70,7 +87,6 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
   button:hover {
     background-color: #0056b3;
   }
@@ -91,25 +107,16 @@
     text-align: center;
     margin-bottom: 10px;
   }
-  
-  .match {
-    color: green;
-  }
-  
-  .no-match {
-    color: red;
-  }
-
-  .login-link {
+  .signup-link {
     text-align: center;
     margin-top: 20px;
   }
   
-  .login-link a {
+  .signup-link a {
     color: #007bff;
     text-decoration: none;
   }
   
-  .login-link a:hover {
+  .signup-link a:hover {
     text-decoration: underline;
   }

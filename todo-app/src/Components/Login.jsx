@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import "../Styles/Login.css"
+import "./Styles/Login.css"
+import "../index.css";
 
 export const Login = () => {
     const [email, setEmail] = useState('')
@@ -40,7 +41,7 @@ export const Login = () => {
     }
     return (
         <div className='page-container'>
-            <header className='project-header'><h1 className='task-master'>Task Master</h1>
+            <header className='project-header'><h1 className='task-master'><Link to="/">Task Master</Link></h1>
             </header>
             <div className="login-container">
             <h2>Login</h2>

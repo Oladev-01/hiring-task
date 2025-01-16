@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
-import '../Styles/Signup.css';
+import './Styles/Signup.css';
 
 export const Signup = () => {
   const [email, setEmail] = useState('');
@@ -56,7 +56,7 @@ export const Signup = () => {
 
   return (
    <div className='page-container'>
-      <header className='project-header'><h1 className='task-master'>Task Master</h1>
+      <header className='project-header'><h1 className='task-master'><Link to="/">Task Master</Link></h1>
       </header>
       <div className="signup-container">
         <h2>Sign Up</h2>
