@@ -20,7 +20,7 @@ export const LandingPage = () => {
         <span className='signup'><Link to="/signup">Sign Up</Link></span>
       </div>
       </header>
-      <main className='landing-body'>
+      <div className='landing-body'>
         <div className='first-half'>
           <div className='first-half-content'>
           <h1 className='main-heading'><strong>Task Master: The To-Do List That Works for You.</strong></h1>
@@ -34,14 +34,17 @@ export const LandingPage = () => {
           <div className='second-half-content'>
           <h1 className='second-heading'><strong>Run your life like a pro</strong></h1>
           <p className='content-p'>Organize all your to-do’s into lists and projects. Set priorities and categories to stay on track. Boost your productivity with notes, subtasks, and attachments. Achieve more with shared lists and assigned tasks.</p>
-          <p className='get-started'><Link to="/signup">Get Started</Link></p>
+          <p className='get-started second-get-started'><Link to="/signup">Get Started</Link></p>
           </div>
         </div>
-        <img className='last-img'></img>
-     </main>
-        <footer className="landing-footer">
+     </div>
+       <div className="last-img"></div>
+       <div className="footer">
+    
           <p>&copy; {currentYear} Task Master. All rights reserved.</p>
-        </footer>
+        
+       </div>
     </div>
+     
   );
 };

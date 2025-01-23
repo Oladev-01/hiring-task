@@ -93,7 +93,6 @@ body {
 
 .dropdown li:hover {
     border: 30px;
-    /* background-color: rgb(230, 130, 214); */
     color: gray;
 }
 
@@ -134,7 +133,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .your-plan {
@@ -146,8 +145,8 @@ body {
     align-items: center;
 }
 
-
-.add-todo {
+.add-todo,
+.edit-form {
     width: 70%;
     gap: 20px;
     display: flex;
@@ -183,7 +182,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* background-color: yellow; */
     gap: 20px;
 }
 
@@ -251,9 +249,17 @@ input[type="date"] {
     transform: translateY(40%);
 }
 
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    accent-color: #4caf50;
+    cursor: pointer;
+}
+
 #date {
     color: rgb(9, 238, 9);
 }
+
 .fa-pencil {
     width: 20px;
     color: rgba(8, 8, 8, 0.866);
@@ -264,10 +270,65 @@ input[type="date"] {
     color: rgba(255, 0, 0, 0.818);
     cursor: pointer;
 }
+
+.filter-container {
+    display: flex;
+    width: 30%;
+    gap: 20px;
+    color: gray;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-container select {
+    width: 40%;
+    height: 30px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.title-search-input {
+    height: 20px;
+    border-radius: 8px;
+    padding: 4px;
+    border: none;
+    outline: none;
+}
+
+.edit-form input[type="text"] {
+    border-radius: 8px;
+    width: 50%;
+    height: 20px;
+    outline: none;
+}
+
+.edit-form input[type="date"] {
+    border-radius: 8px;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 20%;
+}
+
+.edit-actions button[type="button"],
+.edit-actions button[type="button"] {
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.edit-actions button[type="button"]:hover {
+    color: black;
+    background-color: red;
+}
+
+.edit-actions button[type="submit"]:hover {
+    color: black;
+    background-color: green;
+}
+
 .landing-footer {
     width: 100%;
     padding: 10px 0;
-    /* position: relative; */
     color: rgb(2, 156, 218);
     text-align: center;
     bottom: 0;
