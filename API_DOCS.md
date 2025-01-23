@@ -149,4 +149,19 @@ DELETE /api/v1/todos/3
 Authorization: Bearer <token>
 ```
 
+
+## Running Tests
+Prerequisites
+- Ensure you have Node.js installed.
+- Install the necessary dependencies by running:
+```npm install```
+
+## Running the Tests
+* To run the tests, use the following command:
+```npx mocha src/controllers/register.controller.test.ts
+npx mocha src/controllers/todo.controller.test.ts
+npx mocha src/controllers/login.controller.test.ts
+```
+
+
 The Task Master application provides a comprehensive task management solution with a robust backend API and a user-friendly frontend interface. The backend API handles CRUD operations for todos, while the frontend React application integrates these APIs to provide a seamless user experience. The application is styled using CSS to ensure a visually appealing and responsive design.
