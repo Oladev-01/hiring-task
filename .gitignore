@@ -37,3 +37,6 @@ coverage/
 
 # TypeScript files
 *.tsbuildinfo
+
+.github/
+firebase.json
