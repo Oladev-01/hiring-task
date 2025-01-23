@@ -6,7 +6,6 @@ import { Homepage } from "./Components/Homepage"
 import { About } from "./Components/About"
 import { Contact } from "./Components/Contact"
 import { Services } from "./Components/Services"
-import "./index.css"
 
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/homepage" element={<Homepage />} />
+        <Route path="/dashboard" element={<Homepage />} />
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />

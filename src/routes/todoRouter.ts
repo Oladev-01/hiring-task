@@ -2,6 +2,7 @@ import { Router } from "express";
 import { TodoValidator } from "../validators";
 import { TodoController } from "../controllers";
 import { authenticate } from "../middlewares";
+import { checkAuth } from '../utils'
 
 export const todoRouter = Router();
 
@@ -27,5 +28,6 @@ todoRouter.put(
 
 todoRouter.delete(
   "/:uuid",
+  checkAuth,
   TodoController.deleteTodoController
 );

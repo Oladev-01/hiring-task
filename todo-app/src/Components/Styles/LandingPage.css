@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
 .landing-page {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
@@ -69,8 +75,6 @@
 
 .landing-body {
   margin-top: 4.5em;
-  display: flex;
-  flex-direction: column;
 }
 .first-half, .second-half {
   display: flex;
@@ -95,9 +99,6 @@
   width: 100%;
   background: rgb(1,199,247);
   background: linear-gradient(90deg, rgba(1,199,247,1) 0%, rgba(1,199,247,1) 0%, rgba(9,9,121,1) 100%);
-  
-
-
 }
 .second-half-content {
   align-items: end;
@@ -156,17 +157,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 120vh;
+  height: 150vh;
 }
 /* footer */
 .landing-footer {
   width: 100%;
-  padding: 10px 0;
-  position: relative;
+  /* padding: 10px 0; */
+  /* position: absolute; */
   color: rgb(2,156,218);
   text-align: center;
   bottom: 0;
   left: 0;
-  margin-top: 20px;
+  margin: 0;
 }
 /* end of footer */

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Styles/Login.css"
-import "../index.css";
+import md5 from 'md5';
 
 export const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const [gravatarUrl, setGravatarUrl] = useState();
+    const history = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -28,8 +30,13 @@ export const Login = () => {
             if (data.token) {
                 localStorage.setItem('token', data.token);
                 setSuccess('Login success');
+                const hash = md5(email.trim().toLowerCase());
+                const gravatarUrl = `https://www.gravatar.com/avatar/${hash}?d=mm`
+                setGravatarUrl(gravatarUrl);
+                localStorage.setItem('gravatarUrl', gravatarUrl);
                 setTimeout(() => {
                     setSuccess('');
+                    history('/dashboard');
                 }, 1000);
             }
         } catch (error) {
@@ -44,38 +51,38 @@ export const Login = () => {
             <header className='project-header'><h1 className='task-master'><Link to="/">Task Master</Link></h1>
             </header>
             <div className="login-container">
-            <h2>Login</h2>
-            {error && <p className="error">{error}</p>}
-            {success && <p className="success">{success}</p>}
-            <form onSubmit={handleSubmit}>
-            <div className="form-group">
-                <label htmlFor='email'>Email</label>
-                <input
-                type="email"
-                id="email"
-                placeholder='Enter your email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                />
+                <h2>Login</h2>
+                {error && <p className="error">{error}</p>}
+                {success && <p className="success">{success}</p>}
+                <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label htmlFor='email'>Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder='Enter your email'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder='Enter your password'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p className="signup-link">
+                    Don't have an account? <Link to="/signup">Sign up</Link>
+                </p>
             </div>
-            <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                type="password"
-                id="password"
-                placeholder='Enter your password'
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                />
-            </div>
-            <button type="submit">Login</button>
-            </form>
-            <p className="signup-link">
-                Don't have an account? <Link to="/signup">Sign up</Link>
-            </p>
-        </div>
         </div>
     )
 }

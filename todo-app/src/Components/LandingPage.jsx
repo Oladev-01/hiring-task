@@ -37,7 +37,7 @@ export const LandingPage = () => {
           <p className='get-started'><Link to="/signup">Get Started</Link></p>
           </div>
         </div>
-        <div className='last-img'></div>
+        <img className='last-img'></img>
      </main>
         <footer className="landing-footer">
           <p>&copy; {currentYear} Task Master. All rights reserved.</p>
