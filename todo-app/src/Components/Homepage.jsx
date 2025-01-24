@@ -42,6 +42,7 @@ export const Homepage = () => {
         throw new Error('Failed to load plans');
       }
       const data = await getTodo.json();
+      console.log(data);
       setPlans(data);
     } catch (error) {
       console.error(error);
@@ -76,6 +77,7 @@ export const Homepage = () => {
       fetchPlans();
       setTitle('');
       setDescription('');
+      setDueDate(new Date().toISOString().split('T')[0]);
     } catch (error) {
       alert(error);
     }
@@ -283,7 +285,7 @@ export const Homepage = () => {
                         <p id='date'>{plan.dueDate ? new Date(plan.dueDate).toLocaleDateString() : 'No due date'}</p>
                       </div>
                       <div className="plan-actions">
-                      <i className="fa-solid fa-pencil" onClick={() => handleEditClick(plan)}></i>
+                        <i className="fa-solid fa-pencil" onClick={() => handleEditClick(plan)}></i>
                         <i className="fa-solid fa-trash" onClick={() => handleDeletePlan(plan.uuid)}></i>
                       </div>
                     </>
