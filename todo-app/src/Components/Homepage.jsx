@@ -279,7 +279,7 @@ export const Homepage = () => {
                       />
                       <div className="plan-info">
                         <h3>{plan.title}</h3>
-                        <p>{plan.description}</p>
+                        <p id='desc'>{plan.description}</p>
                         <p id='date'>{plan.dueDate ? new Date(plan.dueDate).toLocaleDateString() : 'No due date'}</p>
                       </div>
                       <div className="plan-actions">

@@ -218,8 +218,10 @@ input[type="date"] {
 .plans {
     width: 100%;
     display: flex;
-    padding: 20px;
+    padding: 10px;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .plans ul li {
@@ -227,13 +229,23 @@ input[type="date"] {
 }
 
 .plan {
-    width: 60%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
+    text-align: center;
     align-items: center;
     margin: 20px;
-    transform: translateX(30%);
+    transform: translateX(20%);
     color: rgba(255, 255, 255, 0.678);
+}
+#desc {
+    width: 80%;
+    text-align: center;
+}
+.plan-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .plan-info h3 {
@@ -254,6 +266,7 @@ input[type='checkbox'] {
     height: 20px;
     accent-color: #4caf50;
     cursor: pointer;
+    /* transform: translateY(150%); */
 }
 
 #date {
@@ -326,7 +339,7 @@ input[type='checkbox'] {
     background-color: green;
 }
 
-.landing-footer {
+.footer {
     width: 100%;
     padding: 10px 0;
     color: rgb(2, 156, 218);
@@ -334,6 +347,6 @@ input[type='checkbox'] {
     bottom: 0;
     left: 0;
     margin-top: 0;
-    border-top: 1px solid rgb(52, 132, 230);
-    transform: translateY(300%);
+    border-top: 1px solid rgb(27, 94, 195);
+    transform: translateY(100%);
 }
