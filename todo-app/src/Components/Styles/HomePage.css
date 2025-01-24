@@ -157,7 +157,9 @@ body {
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-
+.edit-form {
+    transform: translateX(20%);
+}
 .show-createplan {
     display: block;
 }
@@ -220,7 +222,7 @@ input[type="date"] {
     display: flex;
     padding: 10px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 
@@ -229,13 +231,12 @@ input[type="date"] {
 }
 
 .plan {
-    width: 90%;
+    width: 900px;
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
     margin: 20px;
-    transform: translateX(20%);
     color: rgba(255, 255, 255, 0.678);
 }
 #desc {
@@ -266,7 +267,6 @@ input[type='checkbox'] {
     height: 20px;
     accent-color: #4caf50;
     cursor: pointer;
-    /* transform: translateY(150%); */
 }
 
 #date {

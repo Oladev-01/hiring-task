@@ -40,11 +40,8 @@ export const LandingPage = () => {
      </div>
        <div className="last-img"></div>
        <div className="footer">
-    
           <p>&copy; {currentYear} Task Master. All rights reserved.</p>
-        
        </div>
     </div>
-     
   );
 };
